@@ -3,20 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>World Of BookWorms</title>
     <link href="/src/index.css" rel="stylesheet" />
     <script defer type="module" src="/src/main.js"></script>
   </head>
-  <body>
-    <div class="text-2xl font-bold min-h-screen flex flex-col items-center justify-center">
-      <p class="border p-4 px-8 rounded-full bg-black text-green-300">
-        Congratulations! Your Setup is Done!
-      </p>
-      <p class="text-sm my-8">
-        Made with ❤️ by
-        <a href="https://tapascript.io" class="underline text-indigo-400 font-normal">tapaScript</a>
-        community
-      </p>
+  <body class=" bg-gray-100 p-6">
+    <!-- User Switcher Start here -->
+    <div class=" max-w-4xl mx-auto space-y-6">
+      <h1 class=" text-3xl font-bold text-center">Welcome To The Planet Of BookWorms</h1>
+      <div class="  flex flex-col xl:flex-row ">
+        <label class=" font-bold" for="userSwitcher">Chose User View:</label>
+        <select class=" border p-2 rounded " name="" id="userSwitcher">
+          <option value="member">Member View</option>
+          <option value="admin">Admin View</option>
+        </select>
+      </div>
     </div>
+      <!-- User Switcher Ends here -->
   </body>
 </html>
