@@ -18,87 +18,93 @@
           >Chose User View:</label
         >
         <select class="border p-2 rounded-xl" name="" id="userSwitcher">
-          <option  class=" text-black" value="admin">Admin View</option>
-          <option class=" text-black" value="member">Member View</option>
+          <option class="text-black" value="member">Member View</option>
+          <option class="text-black" value="admin">Admin View</option>
         </select>
       </div>
     </div>
     <!-- User Switcher Ends here -->
-     <!-- Main Container -->
-  <div class=" flex flex-col justify-center gap-4 items-center my-4 container mx-auto">
-    <div class="">
-      <!-- Book Entry Form Start Here -->
-      <section class=" border rounded-2xl p-6" id="bookSection">
-      <div class="hero -xl">
-        <div class="hero-content flex-col lg:flex-col">
-          <div class="text-center lg:text-left">
-            <h1 class="text-4xl font-bold">Add a New Book</h1>
-          </div>
-          <div class="card bg-base-100 w-full">
-            <div class="">
-              <form id="bookForm" class="fieldset ">
+    <!-- Main Container -->
+    <div
+      class="flex flex-col justify-center gap-4 items-center my-4 container mx-auto"
+    >
+      <div class="">
+        <!-- Book Entry Form Start Here -->
+        <section class="border rounded-2xl p-6" id="bookSection">
+          <div class="hero -xl">
+            <div class="hero-content flex-col lg:flex-col">
+              <div class="text-center lg:text-left">
+                <h1 class="text-4xl font-bold">Add a New Book</h1>
+              </div>
+              <div class="card bg-base-100 w-full">
                 <div class="">
-                  <label class="block font-medium text-xl" for="title"
-                    >Title</label
-                  >
-                  <input
-                    type="text"
-                    id="title"
-                    class="input"
-                    required
-                    placeholder="Title"
-                  />
+                  <form id="bookForm" class="fieldset">
+                    <div class="">
+                      <label class="block font-medium text-xl" for="title"
+                        >Title</label
+                      >
+                      <input
+                        type="text"
+                        id="title"
+                        class="input"
+                        required
+                        placeholder="Title"
+                      />
+                    </div>
+                    <div>
+                      <label class="block font-medium text-xl" for="author"
+                        >Author</label
+                      >
+                      <input
+                        type="text"
+                        id="author"
+                        class="input"
+                        required
+                        placeholder="Author"
+                      />
+                    </div>
+                    <div>
+                      <label class="block font-medium text-xl" for="genre"
+                        >Genre</label
+                      >
+                      <input
+                        type="text"
+                        id="genre"
+                        class="input"
+                        required
+                        placeholder="Genre"
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-outline mt-4">
+                      Add Book
+                    </button>
+                  </form>
                 </div>
-                <div>
-                  <label class="block font-medium text-xl" for="author"
-                    >Author</label
-                  >
-                  <input
-                    type="text"
-                    id="author"
-                    class="input"
-                    required
-                    placeholder="Author"
-                  />
-                </div>
-                <div>
-                  <label class="block font-medium text-xl" for="genre"
-                    >Genre</label
-                  >
-                  <input
-                    type="text"
-                    id="genre"
-                    class="input"
-                    required
-                    placeholder="Genre"
-                  />
-                </div>
-                <button type="submit" class="btn btn-outline mt-4">
-                  Add Book
-                </button>
-              </form>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+        <!-- Book Entry Form Ends Here -->
       </div>
-                  </section>
-    <!-- Book Entry Form Ends Here -->
-     </div>
-     <div id="memberContainer" class=" justify-center  mx-auto">
-              <!-- Available Books Section Start -->
-    <section id="availableBooksSection" class="p-6 border rounded-xl shadow mb-4">
-      <h2 class="text-xl font-semibold mb-4 text-center">Available Books</h2>
-      <ul id="bookList" class=" space-y-2"></ul>
-    </section>
-    <!-- Available Books Section Ends -->
-          <!-- Borrowed Books Section Start -->
-    <section id="borrowedBooksSection" class="p-6 rounded-xl shadow border">
-      <h2 class="text-xl font-semibold mb-4 text-center">Borrowed Books</h2>
-      <ul id="borrowedList" class=" space-y-2"></ul>
-    </section>
-     <!-- Borrowed Books Section Ends -->
+      <div id="memberContainer" class="justify-center mx-auto">
+        <!-- Available Books Section Start -->
+        <section
+          id="availableBooksSection"
+          class="p-6 border rounded-xl shadow mb-4"
+        >
+          <h2 class="text-xl font-semibold mb-4 text-center">
+            Available Books
+          </h2>
+          <ul id="bookList" class="space-y-2"></ul>
+        </section>
+        <!-- Available Books Section Ends -->
+        <!-- Borrowed Books Section Start -->
+        <section id="borrowedBooksSection" class="p-6 rounded-xl shadow border">
+          <h2 class="text-xl font-semibold mb-4 text-center">Borrowed Books</h2>
+          <ul id="borrowedList" class="space-y-2"></ul>
+        </section>
+        <!-- Borrowed Books Section Ends -->
+      </div>
     </div>
-   </div>
-  </body>
   </body>
 </html>
