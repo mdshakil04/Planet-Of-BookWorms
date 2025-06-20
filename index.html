@@ -18,15 +18,18 @@
           >Chose User View:</label
         >
         <select class="border p-2 rounded-xl" name="" id="userSwitcher">
-          <option value="member">Member View</option>
-          <option value="admin">Admin View</option>
+          <option  class=" text-black" value="admin">Admin View</option>
+          <option class=" text-black" value="member">Member View</option>
         </select>
       </div>
     </div>
     <!-- User Switcher Ends here -->
-    <!-- Book Entry Form Start Here -->
-    <section>
-      <div class="hero border rounded-xl my-4">
+     <!-- Main Container -->
+  <div class=" flex flex-col justify-center gap-4 items-center my-4 container mx-auto">
+    <div class="">
+      <!-- Book Entry Form Start Here -->
+      <section class=" border rounded-2xl p-6" id="bookSection">
+      <div class="hero -xl">
         <div class="hero-content flex-col lg:flex-col">
           <div class="text-center lg:text-left">
             <h1 class="text-4xl font-bold">Add a New Book</h1>
@@ -78,22 +81,24 @@
           </div>
         </div>
       </div>
-    </section>
+                  </section>
     <!-- Book Entry Form Ends Here -->
-
-    <!-- Available Books Section Start -->
+     </div>
+     <div id="memberContainer" class=" justify-center  mx-auto">
+              <!-- Available Books Section Start -->
     <section id="availableBooksSection" class="p-6 border rounded-xl shadow mb-4">
       <h2 class="text-xl font-semibold mb-4 text-center">Available Books</h2>
       <ul id="bookList" class=" space-y-2"></ul>
     </section>
     <!-- Available Books Section Ends -->
-
-     <!-- Borrowed Books Section Start -->
+          <!-- Borrowed Books Section Start -->
     <section id="borrowedBooksSection" class="p-6 rounded-xl shadow border">
       <h2 class="text-xl font-semibold mb-4 text-center">Borrowed Books</h2>
       <ul id="borrowedList" class=" space-y-2"></ul>
     </section>
      <!-- Borrowed Books Section Ends -->
+    </div>
+   </div>
   </body>
   </body>
 </html>
