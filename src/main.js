@@ -18,6 +18,7 @@ userSwitcher.addEventListener('change', (e) =>{
     // console.log(currentUser)
     bookSection.style.display = (selected === 'admin' ? 'block' : 'none');
     borrowedSection.style.display = (selected === 'member' ? 'block' : 'none')
+    renderBooks();
 })
 // From Functionality
 bookForm.addEventListener("submit", (e) =>{
@@ -35,13 +36,21 @@ function renderBooks(){
     bookList.innerHTML = "";
     library.getAllBooks().forEach((book) => {
         const li = document.createElement('li');
+        let controls = '';
+        if(currentUser.getRole() === 'Member' && book.isAvailable){
+            controls = `<button  class="btn btn-outline btn-accent mt-4 rounded-2xl">Borrow</button>`;
+        }else if(currentUser.getRole() === 'Admin'){
+            controls = `<span>${book.isAvailable ? 'Available' : 'Borrowed'}</span>`;
+        }
         // console.log(li)
         li.innerHTML = `
             <div>
                 <strong>${book.title}</strong> by ${book.author} <em>(${book.genre})</em>
             </div>
+            ${controls}
         `;
-        bookList.appendChild(li);
+        
+        bookList.appendChild(li); 
     })
 }
 // Initial Rendering
