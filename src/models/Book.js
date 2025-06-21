@@ -4,5 +4,6 @@ export class Book {
         this.title = title;
         this.author = author;
         this.genre = genre;
-        this.isAvailable = true;    }
+        this.isAvailable = true;
+    }
 }
